@@ -1,16 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main(int n, char *argv[])
-{   int i = n;
-    if ((n > 9) || (n < 0))
+int main(int argc, char *argv[])
+{
+    if (argc != 3)
     {
         return 1;
     }
-    for (int i = 0; i < n; i++)
+    else
     {
-        puts(argv[1]);
-		puts("salut");
+        int i = argv[2][0] - 48;
+        int cpt = 0;
+        while (cpt < i)
+        {
+            puts(argv[1]);
+            cpt++;
+        }
+        return 0;
     }
-    return 0;
 }
